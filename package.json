@@ -1,0 +1,27 @@
+{
+  "name": "react-native-project-structure",
+  "version": "1.0.0",
+  "description": "React-native project structure from Brijesh Shiroya",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BrijeshShiroya/RNStructure.git"
+  },
+  "keywords": [
+    "project-structure",
+    "project",
+    "react-native"
+  ],
+  "author": "Brijesh Shiroya",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BrijeshShiroya/RNStructure/issues"
+  },
+  "homepage": "https://github.com/BrijeshShiroya/RNStructure#readme",
+  "dependencies": {
+    "babel-preset-react-native": "^4.0.1"
+  }
+}

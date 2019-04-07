@@ -1,0 +1,1 @@
+export const alert_alert1 = 'This is alert thanks';
