@@ -3,42 +3,42 @@
 
 Create react-native app
 
-`react-native init myApp`
+$ react-native init myApp
 
 
 install react-navigation library
 
-`npm install --save react-navigation`
+$ npm install --save react-navigation
 
 
 install react-native-gesture-handler
 
-`npm install --save react-native-gesture-handler`
+$ npm install --save react-native-gesture-handler
 
 link library
 
-`react-native link react-native-gesture-handler`
+$ react-native link react-native-gesture-handler
 
 install react-redux
 
-`npm install --save react-redux`
+$ npm install --save react-redux
 
 install redux
 
-`npm install --save redux`
+$ npm install --save redux
 
 install redux-thunk
 
-`npm install --save redux-thunk`
+$ npm install --save redux-thunk
 
 install react-navigation-redux-helpers
 
-`npm install --save react-navigation-redux-helpers`
+$ npm install --save react-navigation-redux-helpers
 
 
 run below command for generate main.jsbundle
 
-`react-native bundle --entry-file='index.js' --bundle-output='./ios/main.jsbundle' --dev=false --platform='ios' --assets-dest='./ios'`
+$ react-native bundle --entry-file='index.js' --bundle-output='./ios/main.jsbundle' --dev=false --platform='ios' --assets-dest='./ios'`
 
 generate releaseStaging build
 
@@ -60,5 +60,5 @@ Add below code into `root/android/app/build.gradle` file
     
 generate releaseStaging build go to `root/android`
 
-`./gradlew assembleReleaseStaging`
+$ ./gradlew assembleReleaseStaging
 
