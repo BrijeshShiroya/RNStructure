@@ -30,3 +30,7 @@ install redux
 install redux-thunk
 
 `npm install --save redux-thunk`
+
+install react-navigation-redux-helpers
+
+`npm install --save react-navigation-redux-helpers`
