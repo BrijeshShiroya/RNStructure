@@ -1,15 +1,13 @@
 import { createStackNavigator } from 'react-navigation';
-import { Home, Profile } from './screens';
+import { Splash, Home, Profile } from '../src/screens';
 
-const AppNavigator = createStackNavigator(
-    {
-        Home: { screen: Home },
-        Profile: { screen: Profile },
-    }, {
-        initialRouteName: 'Home',
-        // headerMode: 'none'
-    }
-)
-
+const AppNavigator = createStackNavigator({
+  Splash: { screen: Splash },
+  Home: { screen: Home },
+  Profile: { screen: Profile },
+},
+  {
+    initialRouteName: 'Home',
+    headerMode: 'none',
+  })
 export default AppNavigator;
-

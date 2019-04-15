@@ -1,31 +1,37 @@
 import {
-    login_request,
-    login_success,
-    login_fail
+  LOGIN_REQUEST,
+  LOGIN_SUCCESS,
+  LOGIN_FAILURE
 } from './actionTypes';
 
-const initialState = {
-    loading: false
+const intialState = {
+  loading: false,
+  userData: {},
+  error: null
 }
 
-export default (state = initialState, action) => {
-    switch (action.type) {
-        case login_request:
-            return {
-                ...state,
-                loading: true
-            }
-        case login_success:
-            return {
-                ...state,
-                loading: false
-            }
-        case login_fail:
-            return {
-                ...state,
-                loading: false
-            }
-        default:
-            return state
-    }
+export default (state = intialState, action) => {
+  console.log('coming into reducer')
+  switch (action.type) {
+    case LOGIN_REQUEST:
+      console.log('coming into reducer of ', action.type)
+      return {
+        ...state,
+        loading: true
+      };
+    case LOGIN_SUCCESS:
+      return {
+        ...state,
+        loading: false
+      };
+    case LOGIN_FAILURE:
+      return {
+        ...state,
+        loading: false
+      };
+    default:
+      return state
+  }
 }
+
+

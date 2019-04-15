@@ -1,3 +1,3 @@
-export const login_request = 'login_request';
-export const login_success = 'login_success';
-export const login_fail = 'login_fail';
+export const LOGIN_REQUEST = 'LOGIN_REQUEST';
+export const LOGIN_SUCCESS = 'LOGIN_SUCCESS';
+export const LOGIN_FAILURE = 'LOGIN_FAILURE';

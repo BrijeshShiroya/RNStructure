@@ -1,1 +1,2 @@
-export const alert_alert1 = 'This is alert thanks';
+
+export const alerts1 = 'alerts';

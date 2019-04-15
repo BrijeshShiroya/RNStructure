@@ -1,49 +1,45 @@
+
 import React, { Component } from 'react';
-import {
-    View,
-    TouchableOpacity,
-    SafeAreaView,
-    Platform,
-    Text
-} from 'react-native';
-import * as palettes from '../../constants/palettes';
+import { View, Text, TouchableOpacity } from 'react-native';
+import { connect } from 'react-redux';
+import { login } from '../../store/Auth/actions';
 import styles from './style';
-import { NavigationBarButton } from '../../component/atoms';
-export default class Home extends Component {
-    static navigationOptions = ({ navigation }) => ({
-        title: 'Home',
-        headerStyle: palettes.navigationBar,
-        headerTitleStyle: palettes.navigationBarTitle,
-        headerRight: <NavigationBarButton title={'right'} onPress={navigation.getParam('rightPress')} />,
-        headerLeft: <NavigationBarButton title={'left'} onPress={navigation.getParam('leftPress')} />,
-    });
 
-    rightPress = () => {
-        alert('right')
-    }
+class Home extends Component {
+ render() {
+  return (
+   <View style={styles.container}>
+    <TouchableOpacity style={{ height: 100, width: 100 }}
+     onPress={() => {
+      this.props.navigation.navigate('Profile')
+     }}>
+     <Text>Next</Text>
+    </TouchableOpacity>
 
-    leftPress = () => {
-        alert('left')
-    }
+    <TouchableOpacity style={{ height: 100, width: 100 }} onPress={() => {
+     this.props.navigation.goBack()
+    }}>
+     <Text>Back</Text>
+    </TouchableOpacity>
 
-    componentDidMount() {
-        this.props.navigation.setParams({ rightPress: this.rightPress, leftPress: this.leftPress });
-    }
-
-
-    render() {
-        return (
-            <SafeAreaView style={{ flex: 1 }}>
-                <View style={styles.container}>
-                    <TouchableOpacity
-                        style={styles.button}
-                        onPress={() => {
-                            this.props.navigation.navigate('Profile')
-                        }}>
-                        <Text style={styles.text}> Next</Text>
-                    </TouchableOpacity>
-                </View>
-            </SafeAreaView>
-        );
-    }
+    <TouchableOpacity style={{ height: 100, width: 100 }}
+     onPress={() => {
+      this.props.login()
+     }}>
+     <Text>Get Data</Text>
+    </TouchableOpacity>
+    <Text>hi</Text>
+    <Text>{JSON.stringify(this.props.loading)}</Text>
+   </View>
+  );
+ }
 }
+
+const mapStateToProps = state => {
+ const { loading } = state.auth
+ return {
+  loading
+ }
+};
+
+export default connect(mapStateToProps, { login })(Home)

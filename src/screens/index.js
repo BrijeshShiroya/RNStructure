@@ -1,7 +1,9 @@
 import Home from './Home';
-import Profile from './Profile'
+import Splash from './Splash';
+import Profile from './Profile';
 
 export {
-    Home,
-    Profile
+ Home,
+ Splash,
+ Profile
 }

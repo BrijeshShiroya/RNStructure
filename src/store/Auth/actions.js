@@ -1,24 +1,19 @@
 import {
-    login_request,
-    login_success,
-    login_fail
+ LOGIN_REQUEST,
+ LOGIN_SUCCESS,
+ LOGIN_FAILURE
 } from './actionTypes';
 
-const loginRequest = (dispatch) => {
-    dispatch({
-        type: login_request,
-    });
-};
 
-export const login = (email) => {
-    return (dispatch) => {
-        dispatchToReducer(dispatch, login_request)
-    }
+export const login = () => {
+ return (dispatch) => {
+  returnToDispatch(dispatch, LOGIN_REQUEST)
+ }
 }
 
-dispatchToReducer = (dispatch, actionType, data) => {
-    dispatch({
-        type: actionType,
-        payload: data
-    });
+returnToDispatch = (dispatch, type, payload) => {
+ dispatch({
+  type: type,
+  payload: payload
+ })
 }

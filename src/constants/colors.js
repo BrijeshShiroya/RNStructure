@@ -1,3 +1,1 @@
-export const navigationBgColor = '#009688';
-export const navigationTitleColor = 'white';
-
+export const primaryColor = 'red';

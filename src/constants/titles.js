@@ -1,1 +1,0 @@
-export const title1 = 'title1';
