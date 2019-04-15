@@ -57,3 +57,8 @@ Add below code into `root/android/app/build.gradle` file
         }
     }
     `
+    
+generate releaseStaging build go to `root/android`
+
+`./gradlew assembleReleaseStaging`
+
