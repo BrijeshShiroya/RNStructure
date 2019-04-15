@@ -34,3 +34,7 @@ install redux-thunk
 install react-navigation-redux-helpers
 
 `npm install --save react-navigation-redux-helpers`
+
+
+run below command for generate main.jsbundle
+`react-native bundle --entry-file='index.js' --bundle-output='./ios/main.jsbundle' --dev=false --platform='ios' --assets-dest='./ios'`
