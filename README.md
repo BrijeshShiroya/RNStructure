@@ -62,3 +62,5 @@ generate releaseStaging build go to `root/android`
 
 $ ./gradlew assembleReleaseStaging
 
+For more information https://medium.com/@shiroya8484/make-release-of-ios-android-in-react-native-project-8400fe831315
+
